@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UK Tax and National Insurance Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+  <img class="image" src="tax.png" width="150" height="150" title="Your Title Here">
+    <h2>UK 2024/25 Tax & NI Calculator</h2>
+</div>
+    
+<!--<label for="income">Enter your annual income (£):</label>-->
+<input type="number" id="income" placeholder="Enter your annual income">
+
+<button id="calculateButton">Calculate</button> 
+<br>
+<br>
+
+<div id="checkboxWrapper" style="display: none;"> <!-- Wrapper div for checkboxes -->
+  <h4 class = "checkboxLabel">Check box as applicable</h4>
+  <div class="container2">
+      <div class="column">
+          <div class="row">
+              <input type="checkbox" id="myCheckbox">
+              <label for="myCheckbox"><small>Pensioner</small></label>
+          </div>
+          <div class="row">
+              <input type="checkbox" id="myCheckbox2">
+              <label for="myCheckbox2"><small>Self-Employed</small></label>
+          </div>
+      </div>
+      <div class="column">
+          <div class="row">
+              <input type="checkbox" id="myCheckbox3">
+              <label for="myCheckbox3"><small>Marriage Allowance</small></label>
+          </div>
+          <div class="row">
+              <input type="checkbox" id="myCheckbox4">
+              <label for="myCheckbox4"><small>Scottish Taxpayer</small></label>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+<h4 id="resultsHeading" style="display: none;">UK (excl.Scotland):</h4>
+
+<table id="resultTable1">
+  <thead>
+      <tr>
+          <th class="attribute">Attribute</th>
+          <th class="annual">Annual</th>
+          <th class="monthly">Monthly</th>
+      </tr>
+  </thead>
+  <tbody>
+      
+      <tr>
+          <td id="t20" class="small-text">Taxed @ 20%</td>
+          <td id="tax2" class="small-text"></td>
+          <td id="tax2m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="t40" class="small-text">Taxed @ 40%</td>
+          <td id="tax3" class="small-text"></td>
+          <td id="tax3m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="t45" class="small-text">Taxed @ 45%</td>
+          <td id="tax4" class="small-text"></td>
+          <td id="tax4m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="tt" class="small-text">Total Tax</td>
+          <td id="taxtot" class="small-text"></td>
+          <td id="taxtotm" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="ni" class="small-text">NI</td>
+          <td id="result2" class="small-text"></td>
+          <td id="result2m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="deductions" class="small-text">Deductions</td>
+          <td id="totalDeductionAnnual" class="small-text"></td>
+          <td id="totalDeductionMonth" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="net_income" class="small-text">Net Income</td>
+          <td id="netincome" class="small-text"></td>
+          <td id="netincomem" class="small-text"></td>
+      </tr>
+  </tbody>
+</table>
+<br>
+
+<div id="effectiveTax" style="display: none;" class="small-text"></div>
+<br>
+
+
+<h4 id="resultsHeading2" style="display: none;">Scotland:</h4>
+
+<table id="resultTable2">
+  <thead>
+      <tr>
+          <th class="attribute">Attribute</th>
+          <th class="annual">Annual</th>
+          <th class="monthly">Monthly</th>
+      </tr>
+  </thead>
+  <tbody>
+      
+      <tr>
+          <td id="scot19" class="small-text">Taxed @ 19%</td>
+          <td id="scotax1" class="small-text"></td>
+          <td id="scotax1m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="scot20" class="small-text">Taxed @ 20%</td>
+          <td id="scotax2" class="small-text"></td>
+          <td id="scotax2m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="scot21" class="small-text">Taxed @ 21%</td>
+          <td id="scotax3" class="small-text"></td>
+          <td id="scotax3m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="scot42" class="small-text">Taxed @ 42%</td>
+          <td id="scotax4" class="small-text"></td>
+          <td id="scotax4m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="scot45" class="small-text">Taxed @ 45%</td>
+          <td id="scotax5" class="small-text"></td>
+          <td id="scotax5m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="scot48" class="small-text">Taxed @ 48%</td>
+          <td id="scotax6" class="small-text"></td>
+          <td id="scotax6m" class="small-text"></td>
+      </tr>
+      <tr>
+        <td id="maScot" class="small-text">Marriage Allowance</td>
+        <td id="scotaxma" class="small-text"></td>
+        <td id="scotaxmam" class="small-text"></td>
+        </tr>
+      <tr>
+          <td id="tt" class="small-text">Total Tax</td>
+          <td id="scotaxtot" class="small-text"></td>
+          <td id="scotaxtotm" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="ni" class="small-text">NI</td>
+          <td id="scotresult2" class="small-text"></td>
+          <td id="scotresult2m" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="deductions" class="small-text">Deductions</td>
+          <td id="stotalDeductionAnnual" class="small-text"></td>
+          <td id="stotalDeductionMonth" class="small-text"></td>
+      </tr>
+      <tr>
+          <td id="net_income" class="small-text">Net Income</td>
+          <td id="scotnetincome" class="small-text"></td>
+          <td id="scotnetincomem" class="small-text"></td>
+      </tr>
+  </tbody>
+</table>
+
+
+<br>
+<div id="scotEffectiveTax" style="display: none;" class="small-text"></div>
+<br>
+
+<script src="newScript.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    text-align: left;
+    margin-left: 60px;
+  }
+
+.todolink {
+  margin-left: 15px;
+}
+
+.container {
+    display: block;
+    align-items: center; /* Centers vertically */
+    gap: 20px; /* Adjust the spacing between the image and h1 */
+}
+
+.image {
+    opacity: 0.5;/* Add any specific styling for the image */
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 2px ridge rgb(21, 141, 215);
+    font-size: small;
+    background-color: #fff;
+  }
+
+button {
+padding: 7px 20px;
+margin-left: 7px;
+opacity: 0.5;
+background-color: #007bff;
+color: #fff;
+border: #0056b3 solid 2px;
+cursor: pointer;
+border-radius: 3px;
+}
+
+button:hover {
+    background-color:  #007bff;
+    opacity: 1;
+    border: #0056b3 solid 2px;
+    color: white;
+}
+
+.container2 {
+    display: flex;
+    align-items: center; /* Centers vertically */
+    gap: 20px; /* Adjust the spacing between the image and h1 */
+}
+
+.small-text {
+    font-size: smaller; /* You can adjust the size as needed */
+  }
+  
+  /* Define CSS styles for table borders and cell sizing */
+  table {
+    display: none; /* Initially hide the table */
+    border-collapse: collapse; /* Collapse border spacing */
+    table-layout: auto; /* Allow cells to size based on content */
+  }
+  
+  td {
+    border: 2px ridge rgb(21, 141, 215); /* Add 1px solid black border to table, th, and td elements */
+    padding: 4px; /* Add padding to table cells */
+    width: 120px; /* Set a fixed width for the table cells */
+    text-align: left; /* Center align the content within cells */
+  }
+  
+  /* Style for even rows */
+  th {
+    padding: 4px;
+    border: 2px ridge rgb(21, 141, 215); /* Add 1px solid black border to table, th, and td elements */
+    background-color: aliceblue; /* Change background color for even rows */
+    text-align: left; /* Center align the content within cells */
+    font-size: small; 
+  }
+
+.checkboxLabel {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+#resultsHeading {
+  margin-bottom: 5px;
+}
+
+#resultsHeading2 {
+  margin-bottom: 5px;
+}
