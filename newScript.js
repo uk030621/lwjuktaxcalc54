@@ -381,7 +381,7 @@ function calculateTax() {
     console.log("higher =", higher)
     console.log("advanced =", advanced)
     
-    if (globalVariableScotland===1 && globalVariableMarriage && income >maKickIn) {flagMA = -252}
+    if (globalVariableScotland===1 && globalVariableMarriage && income >maKickIn && income <= IRe) {flagMA = -252}
     else {flagMA = 0}
 
     console.log("FLAG MA = ", flagMA)
